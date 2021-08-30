@@ -35,6 +35,12 @@ public class MenuItem {
         }
     }
 
+    public void setItem(String aItem) {
+        if (aItem != null && !aItem.equals("")) {
+            item = aItem;
+        }
+    }
+
     public void setPrice(double aPrice) {
         if (aPrice > 0) {
             price = aPrice;
@@ -57,6 +63,10 @@ public class MenuItem {
 
     public void setIsNewItem(boolean aIsNewItem) {
         isNewItem = aIsNewItem;
+    }
+
+    public String getItem() {
+        return item;
     }
 
     public double getPrice() {
