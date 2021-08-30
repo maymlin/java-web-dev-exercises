@@ -21,10 +21,8 @@ public class Menu {
     }
 
     public void addMenuItem(MenuItem aMenuItem) {
+        setNewItemToFalse();
         menuOfItems.add(aMenuItem);
-        for (MenuItem item : menuOfItems) {
-            item.setIsNewItem(false);
-        }
         this.setLastUpdate();
     }
 
@@ -32,9 +30,16 @@ public class Menu {
         boolean isRemoved = menuOfItems.remove(aItem);
 
         if (isRemoved) {
+            setNewItemToFalse();
             System.out.println("Success: menu item removed.");
         } else {
             System.out.println("Failed: item not in the menu.");
+        }
+    }
+
+    private void setNewItemToFalse() {
+        for (MenuItem item : menuOfItems) {
+            item.setIsNewItem(false);
         }
     }
 

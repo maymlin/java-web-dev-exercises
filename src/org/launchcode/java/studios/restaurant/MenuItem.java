@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MenuItem {
+    private String item;
     private double price;
     private String description;
     // 8/18/2021 Potentially I might want to split categories out into its own
@@ -23,7 +24,8 @@ public class MenuItem {
     private String category;
     private boolean isNewItem = true;
 
-    public MenuItem(double price, String description, String category) {
+    public MenuItem(String item, double price, String description, String category) {
+        this.item = item;
         this.price = price;
         this.description = description;
         if (categories.contains(category)) {
@@ -74,6 +76,7 @@ public class MenuItem {
     }
 
     public void printMenuItem() {
+        System.out.println("dish: " + item);
         System.out.println("description: " + description);
         System.out.println("price: " + price);
         System.out.println("category: " + category);
