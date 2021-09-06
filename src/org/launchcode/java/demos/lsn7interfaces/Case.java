@@ -44,4 +44,16 @@ public class Case {
     public void setCones(ArrayList<Cone> cones) {
         this.cones = cones;
     }
+
+    public void printFlavors() {
+        for (Flavor flavor : flavors) {
+            System.out.println(flavor.getName() + " " + flavor.getAllergens());
+        }
+    }
+
+    public void printCones() {
+        for (Cone cone: cones) {
+            System.out.println(cone.getName() + ": " + cone.getCost());
+        }
+    }
 }

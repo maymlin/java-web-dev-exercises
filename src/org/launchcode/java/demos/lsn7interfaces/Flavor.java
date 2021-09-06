@@ -9,5 +9,4 @@ public class Flavor extends Ingredient {
         super (aName, aCost, someAllergens);
     }
 
-
 }
