@@ -2,7 +2,6 @@ package org.launchcode.java.studios.restaurant;
 
 import java.util.Date;
 import java.util.ArrayList;
-import java.util.Map;
 
 public class Menu {
     Date lastUpdate = new Date();
@@ -27,9 +26,9 @@ public class Menu {
 
         if (isRemoved) {
             setNewItemToFalse();
-            System.out.println("Success: menu item removed.");
+            System.out.println("Success: menu item " + aItem.getItem() + "removed.");
         } else {
-            System.out.println("Failed: item not in the menu.");
+            System.out.println("Failed: item " + aItem.getItem() + "not on the menu.");
         }
     }
 

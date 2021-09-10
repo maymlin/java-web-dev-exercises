@@ -31,6 +31,7 @@ public class MenuItem {
         if (categories.contains(category)) {
             this.category = category;
         } else {
+            this.category = "TBD";
             System.out.println("Invalid category. Please reset ASAP.");
         }
     }
@@ -55,7 +56,7 @@ public class MenuItem {
 
     public void setCategory(String aCategory) {
         if (categories.contains(category)) {
-            this.category = category;
+            this.category = aCategory;
         } else {
             System.out.println("Invalid category, category cannot be set.");
         }
@@ -86,10 +87,10 @@ public class MenuItem {
     }
 
     public void printMenuItem() {
-        System.out.println("dish: " + item);
-        System.out.println("description: " + description);
-        System.out.println("price: " + price);
-        System.out.println("category: " + category);
+        System.out.println("dish: " + this.getItem());
+        System.out.println("description: " + this.getDescription());
+        System.out.println("price: " + this.getPrice());
+        System.out.println("category: " + this.getCategory());
         if (isNewItem) {
             System.out.println("new item!");
         }

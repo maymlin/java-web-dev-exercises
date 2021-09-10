@@ -23,11 +23,11 @@ public class RestaurantRunner {
         MenuItem bubbleTea = new MenuItem("Buble tea", 5.2, "Milk tea with tapioca pearls", "dessert");
         MenuItem satay = new MenuItem("Chicken Satay", 6.3, "Chicken satay", "appetizer");
 
-        ArrayList<MenuItem> newItemsArrayList = new ArrayList<>(
+        return new ArrayList<>(
                 Arrays.asList(mooshu, pho, bubbleTea, satay)
         );
 
-        return newItemsArrayList;
+
     }
 
     protected static Menu testMenu(ArrayList<MenuItem> aMenuItemsArrayList) {
